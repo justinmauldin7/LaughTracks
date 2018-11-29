@@ -4,4 +4,8 @@ class Comedian < ActiveRecord::Base
   def self.average_age
     average(:age).to_i
   end
+
+  def self.unique_hometowns
+    distinct(:city).pluck(:city)
+  end
 end

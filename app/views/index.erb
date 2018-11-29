@@ -23,7 +23,11 @@
           <h3>Average Runtime:</h3>
           <p><%= @average_runtime %></p>
           <h3>Hometowns:</h3>
-          <p><%= %></p>
+          <% @hometowns.each do |city| %>
+            <ul>
+              <li><%= city %></li>
+            </ul>
+          <% end %>
         </div>
       </div>
     </section>

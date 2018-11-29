@@ -1,6 +1,9 @@
-.col-md-4 img {
+.special {
+  display: inline-block;
+}
+.special img {
   max-width: 50%;
 }
-.col-md-4 h4 {
-  display: inline-block;
+.row {
+  border-bottom: 1px #000 solid;
 }

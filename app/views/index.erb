@@ -7,6 +7,7 @@
     <title>Justin's Comedians with Specials</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
   </head>
 
   <body>
@@ -35,19 +36,22 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class= "col-md-4">
+          <div class= "col-md-12">
             <% @comedians.each do |comedian| %>
+            <div id="comic-<%= comedian.id %>">
               <h3><%= comedian.name %></h3>
               <p>Age: <%= comedian.age %></p>
               <p>Hometown: <%= comedian.city %></p>
 
               <% comedian.specials.each do |special| %>
+              <div class="special">
                 <h4><%= special.title %></h4>
                 <p>Year: <%= special.year %></p>
                 <p>Runtime: <%= special.runtime %></p>
-                <p>Comedian ID: <%= special.comedian_id %></p>
                 <img src="<%= special.image %>" alt="<%= special.title %>" width="150" />
+                </div>
               <% end %>
+              </div>
             <% end %>
             </div>
         </div>

@@ -1,9 +1,7 @@
 class Special < ActiveRecord::Base
   belongs_to :comedian
 
-  def find_a_comedians_specials(comedian_id)
-    if comedian_id == special.comedian_id
-      
-    end
+  def self.average_runtime
+    average(:runtime).to_f.round(2)
   end
 end

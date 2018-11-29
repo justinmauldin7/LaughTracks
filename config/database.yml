@@ -3,12 +3,17 @@
 development:
   adapter: postgresql
   database: laugh-tracks-development
+  host: localhost
 
 test:
   adapter: postgresql
   database: laugh-tracks-test
+  host: localhost
 
 production:
   adapter: postgresql
   database: laugh-tracks-production
+  host: localhost
 
+# default: &default
+# host: localhost

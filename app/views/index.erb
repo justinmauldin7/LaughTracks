@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1">
+
+    <title>Justin's Comedians with Specials</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <section class="jumbotron">
+      <div class="container">
+        <h1>Statistics</h1>
+        <h3>Average Age:</h3>
+        <p><%= %></p>
+        <h3>Average Runtime:</h3>
+        <p><%= %></p>
+        <h3>Hometowns:</h3>
+        <p><%= %></p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class= "col-md-4">
+            <% @comedians.each do |comedian| %>
+              <h3><%= comedian.name %></h3>
+              <p>Age: <%= comedian.age %></p>
+              <p>Hometown: <%= comedian.city %></p>
+
+              <% comedian.specials.each do |special| %>
+                <h4><%= special.title %></h4>
+                <p>Year: <%= special.year %></p>
+                <p>Runtime: <%= special.runtime %></p>
+                <p>Comedian ID: <%= special.comedian_id %></p>
+                <img src="<%= special.image %>" alt="<%= special.title %>" width="150" />
+              <% end %>
+            <% end %>
+            </div>
+        </div>
+      </div
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -9,4 +9,12 @@ class Comedian < ActiveRecord::Base
   def self.unique_hometowns
     distinct(:city).pluck(:city)
   end
+
+  def self.sorter(params)
+    if params[:age]
+      where("age = ?", params[:age])
+    else
+      all
+    end
+  end
 end

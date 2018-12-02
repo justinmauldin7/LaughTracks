@@ -10,12 +10,14 @@ RSpec.describe "Comedian Index Page" do
         expect(page).to have_content(comedian.name)
         expect(page).to have_content("Age: #{comedian.age}")
         expect(page).to have_content("Hometown: #{comedian.city}")
+        expect(page).to have_content("Total Specials: #{comedian.specials.count}")
       end
 
       within "#comic-#{comedian2.id}" do
         expect(page).to have_content(comedian2.name)
         expect(page).to have_content("Age: #{comedian2.age}")
         expect(page).to have_content("Hometown: #{comedian2.city}")
+        expect(page).to have_content("Total Specials: #{comedian2.specials.count}")
       end
     end
     it "should display special info" do
@@ -47,6 +49,7 @@ RSpec.describe "Comedian Index Page" do
       special5 = comedian3.specials.create(title: "title", year: 2018, runtime: 200, image: "https://image.jpg")
       special6 = comedian3.specials.create(title: "title2", year: 2017, runtime: 220, image: "https://image2.jpg")
 
+      total_specials = Special.count
       average_age = Comedian.average_age
       average_runtime = Special.average_runtime
       hometowns = Comedian.unique_hometowns
@@ -54,10 +57,13 @@ RSpec.describe "Comedian Index Page" do
       visit '/comedians'
 
       within "#stats" do
+        expect(page).to have_content(total_specials)
         expect(page).to have_content(average_age)
         expect(page).to have_content(average_runtime)
-        expect(page).to have_content(hometowns)
+        expect(page).to have_css(:li, count: 3)
       end
+
+
     end
   end
 end

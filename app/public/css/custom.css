@@ -1,9 +1,53 @@
+body {
+  background-image: url("https://www.shbarcelona.com/blog/en/wp-content/uploads/2016/04/Comedy-show.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #808080;
+}
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.header {
+  padding: 15px;
+  text-align: center;
+  color: #c0c0c0;
+}
+.header i {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.header div {
+  display: inline-flex;
+}
+.jumbotron {
+  color: #808080;
+}
+.jombotron div {
+  display: inline-flex;
+}
+.comic_box {
+  background-color: #800000;
+  border: 5px solid #c0c0c0;
+  color: #c0c0c0;
+  border-radius: 10px;
+  padding-left: 50px;
+}
 .special {
   display: inline-block;
+  padding: 30px;
+  padding-left: 100px;
+  color: #c0c0c0;
 }
 .special img {
   max-width: 50%;
+  border: 5px solid #c0c0c0;
+  border-radius: 10px;
 }
-.row {
-  border-bottom: 1px #000 solid;
+i {
+  display: inline-block;
+  color: #c0c0c0;
+  font-size: 50px;
+  padding-top: 20px;
 }

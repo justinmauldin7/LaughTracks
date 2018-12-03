@@ -1,3 +1,9 @@
+/*
+===================================
+Typography
+===================================
+*/
+
 body {
   background-image: url("https://www.shbarcelona.com/blog/en/wp-content/uploads/2016/04/Comedy-show.jpg");
   background-position: center;
@@ -6,11 +12,16 @@ body {
   background-color: #808080;
   font-family: 'Titan One', Helvetica, Arial, cursive;
 }
-
 h1 {
   text-align: center;
   padding-bottom: 20px;
 }
+
+/*
+===================================
+Header
+===================================
+*/
 
 .header {
   padding: 15px;
@@ -28,6 +39,11 @@ h1 {
   display: inline-flex;
 }
 
+/*
+===================================
+Jumbotron
+===================================
+*/
 
 .jumbotron {
   color: #808080;
@@ -45,7 +61,6 @@ h1 {
   display: inline-flex;
   color: #808080;
   font-size: 50px;
-
 }
 .stats_content {
   display: inline-flex;
@@ -60,7 +75,11 @@ h1 {
   color: #c0c0c0;
 }
 
-
+/*
+===================================
+Add Comedians Button
+===================================
+*/
 
 .add_comic {
   background-color: #800000;
@@ -76,7 +95,11 @@ h1 {
   color: #808080;
 }
 
-
+/*
+===================================
+Comedians
+===================================
+*/
 
 .comic_box {
   background-color: #800000;
@@ -91,12 +114,15 @@ h1 {
   font-size: 50px;
   padding-top: 20px;
 }
-
 .container {
   padding-bottom: 40px;
 }
 
-
+/*
+===================================
+Specials
+===================================
+*/
 
 .special {
   display: inline-block;
@@ -110,7 +136,11 @@ h1 {
   border-radius: 10px;
 }
 
-
+/*
+===================================
+Footer
+===================================
+*/
 
 footer {
   background-color: #c0c0c0;
@@ -125,10 +155,15 @@ footer {
   color: #800000;
 }
 
+/*
+===================================
+New Comedian Page
+===================================
+*/
+
 .create_instructions {
   text-align: center;
 }
-
 .create_form {
   background-color: #800000;
   border: 5px solid #808080;

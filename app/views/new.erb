@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1">
+
+    <title>Create A Comedian</title>
+
+    <link rel="shotrcut icon" type="image/png" href="/favicon.png"/>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div>
+        <i class="fas fa-theater-masks"></i>
+      </div><!--
+      --><div>
+        <a class="click_link" href="/comedians"><h1>LAUGH TRACKS</h1></a>
+      </div><!--
+      --><div>
+        <i class="fas fa-theater-masks"></i>
+      </div>
+    </header>
+
+    <section id="stats" class="container jumbotron">
+      <div class="create_instructions">
+        <h3>Please fill out the below fields to create a new comedian in the database.</h3>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class= "col-md-12">
+
+            <form class="create_form" action="/comedians" method=POST>
+              <h3>Comedian Name:</h3><input type="text" name="comedian[name]">
+              <h3>Comedian age:</h3><input type="integer" name="comedian[age]">
+              <h3>Comedian Hometown:</h3><input type="text" name="comedian[city]">
+              <input type="submit" value="Submit">
+            </form>
+
+          </div>
+        </div>
+      </div
+    </section>
+
+    <footer>
+      <div><a class="click_link home" href="/comedians"><p>Home</p></a></div>
+
+      <div><p>&copy; Laugh Tracks 2018</p></div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

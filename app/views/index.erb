@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device=width, initial-scale=1">
 
-    <title>Justin's Comedians with Specials</title>
+    <title>Justin's Laugh Tracks</title>
+
+    <link rel="shotrcut icon" type="image/png" href="favicon.png"/>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
 
@@ -18,32 +21,38 @@
         <i class="fas fa-theater-masks"></i>
       </div><!--
       --><div>
-        <h1>Laugh Tracks</h1>
+        <a class="click_link" href="/comedians"><h1>LAUGH TRACKS</h1></a>
       </div><!--
       --><div>
         <i class="fas fa-theater-masks"></i>
       </div>
     </header>
 
-    <section class="jumbotron">
-      <div id="stats" class="container">
+    <section id="stats" class="container jumbotron">
+      <div class="stats_title">
+
+          <i class="fas fa-chart-bar"></i>
+
+          <h2>STATISTICS</h2>
+      </div>
+
+      <div class="stats_content">
+        <div>
+          <h3>Total Specials:</h3>
+            <p><%= @total_specials %></p>
+        </div>
 
         <div>
-          <i class="fas fa-chart-bar"></i>
-        </div><!--
-
-        --><div>
-          <h2>Statistics</h2>
-
-          <h3>Total Specials:</3>
-            <p><%= @total_specials %></p>
-
           <h3>Average Age:</h3>
             <p><%= @average_age %></p>
+        </div>
 
+        <div>
           <h3>Average Runtime:</h3>
             <p><%= @average_runtime %></p>
+        </div>
 
+        <div>
           <h3>Hometowns:</h3>
             <% @hometowns.each do |city| %>
               <ul>
@@ -51,6 +60,11 @@
               </ul>
             <% end %>
         </div>
+
+      </div>
+
+      <div class="add_comic">
+        <a class="click_link" href="/comedians/new"><h3>Add a Comedian<h3></a>
       </div>
     </section>
 
@@ -83,6 +97,12 @@
         </div>
       </div
     </section>
+
+    <footer>
+      <div><a class="click_link home" href="/comedians"><p>Home</p></a></div>
+
+      <div><p>&copy; Laugh Tracks 2018</p></div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
